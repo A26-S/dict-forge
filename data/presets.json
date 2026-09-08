@@ -1,0 +1,46 @@
+{
+  "presets": {
+    "social-engineering": {
+      "name": "社会工程学预设",
+      "description": "基于个人信息的组合预设",
+      "rules": [
+        {
+          "name": "name-birth",
+          "type": "combine",
+          "sources": ["name", "birth"],
+          "weight": 10
+        },
+        {
+          "name": "name-city-birth",
+          "type": "combine",
+          "sources": ["name", "city", "birth"],
+          "weight": 8
+        }
+      ]
+    },
+    "keyboard-trace": {
+      "name": "键盘轨迹预设",
+      "description": "基于键盘相邻字符的预设",
+      "rules": [
+        {
+          "name": "qwerty-pattern",
+          "type": "combine",
+          "source": "keyboard_patterns",
+          "weight": 10
+        }
+      ]
+    },
+    "lucky-numbers": {
+      "name": "吉利数字预设",
+      "description": "基于吉祥数字的预设",
+      "rules": [
+        {
+          "name": "lucky-combine",
+          "type": "combine",
+          "sources": ["name", "lucky_numbers"],
+          "weight": 10
+        }
+      ]
+    }
+  }
+}
